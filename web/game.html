@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>SWGM-Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+        <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src="assets/javascript/bootstrap.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head>
+    <body>
+
+    <nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-black">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Movies</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="prequels.html">Prequels</a></li>
+                        <li><a class="dropdown-item" href="originals.html">Originals</a></li>
+                        <li><a class="dropdown-item" href="sequels.html">Sequels</a></li>
+                    </ul>
+                </li>
+                
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="jedi-council.html">Characters</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="planets.html">Planets</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ships.html">Spaceships</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="game.html">Game</a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+    
+        <div id = "intro" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <img class="img-fluid mx-auto d-block" src="assets/640px-Star_wars_logo_alternate.svg-removebg-preview.png">
+            <h1>Journey to Ilum</h1>
+            <h3>made by MishoBankata<br><br></h3>
+            <h2>You are a Jedi Padawan in the final stages of their training. To complete your training and become a true Jedi,<br> you will need to craft a lightsaber.<br>You already have your hilt, but the lightsaber<br>needs a power source - a kyber crystal.<br><br>Like every other Jedi, you must travel to the frozen planet Ilum<br>and search for a crystal in the planet's caves.<br>Ilum is rich in kyber crystals, but not just any crystal will do.<br>You must use the Force to find the one right for you.<br>The Jedi Council's orders were clear - return with a kyber crystal,<br>May the Force be with you...<br><br></h2>
+            <h3>Use WASD or the or the buttons on the screen to move your character.<br>You can fight the monsters, but you can't escape them.<br>Find your Kyber crystal to win.<br><br></h3>
+            
+            <div id="startInput" style="margin-top: 20px; margin-bottom: 40px; margin-left: auto; margin-right: auto; text-align: center;">
+                <label for="namesEnter">Your first and last name:</label><br>
+                <input type="text" id="namesEnter" name="namesEnter"><br><br>
+                <button onclick="showText(); startGame()" type="button" class="btn btn-dark">Save your name and start the game</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="gameplay" style = "display:none" class="container-fluid">
+
+    <div class="row row-pad">
+        <div class="col-md-6">
+            <canvas id="myCanvas" width=350 height=350 style="margin-bottom: 20px; margin-left: auto; margin-right: auto; display: block;"></canvas>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img id="imgs" class="img-fluid mx-auto d-block" style="height: 350px" src="assets/game_assets/cave.png">
+        </div>
+    </div>
+    
+    <div class="row row-pad">
+        <div class="col-md-6">
+            <div class="row row-pad">
+                <div class="col-12">
+                    <button class="btn btn-dark movebtn" onclick="up()" style="margin-bottom: 20px; margin-left: auto; margin-right: auto; display: block;">Move Up</button>
+                </div>
+                <div class="col-4 col-sm-4 col-md-6">
+                    <button class="btn btn-dark movebtn" onclick="left()" style="margin-left: auto; margin-right: auto; display: block;">Move Left</button>
+                </div>
+                <div class="col-4 d-block d-sm-block d-md-none">
+                    <img id="imgsSmall" class="img-fluid mx-auto d-block" src="assets/game_assets/cave.png" style="height: 50px">
+                </div>
+                <div class="col-4 col-sm-4 col-md-6">
+                    <button class="btn btn-dark movebtn" onclick="right()" style="margin-left: auto; margin-right: auto; display: block;">Move Right</button>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-dark movebtn" onclick="down()" style="margin-top: 20px; margin-left: auto; margin-right: auto; display: block;">Move Down</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p id="gameText"></p>
+        </div>
+    </div>
+    <!--<button style="" class="btn btn-dark" onclick="location.reload()">Exit game</button>-->
+</div>
+
+<script src="assets/javascript/game.js"></script>
+    
+</body>
+</html>
