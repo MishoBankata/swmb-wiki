@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>SWGM-Home</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    
-        <link rel="stylesheet" href="assets/css/style.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <script src="assets/javascript/bootstrap.js"></script>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
-</head>
-    <body>
-
-    <nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-black">
+	<head>
+		<title>SWGM-Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+		<script src="assets/javascript/bootstrap.js"></script>
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png">
+	</head>
+	<body>
+                <nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-black">
 
     <div class="container-fluid">
 
@@ -56,25 +53,19 @@
         </div>
     </div>
 </nav>
-
-    
-    
-        <div class="container-fluid">
-            
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-	
-	<div class="row">
-		<div class="col-md-12">
-			<img class="img-fluid mx-auto d-block" src="assets/640px-Star_wars_logo_alternate.svg-removebg-preview.png">
-			<h1>Welcome to the Star Wars Guide by MishoBankata.</h1>
-			<h2>This website is meant to be a beginner's guide to the Star Wars universe, the movies and the TV shows. Most information has been taken from <a href="https://starwars.fandom.com/wiki/Main_Page" target= "_blank">Wookieepedia</a>.</h2>
-			<h3>Use the buttons at the top of the screen to navigate the website.</h3>
-			<h3>Use Ctrl + f to search for what you need.</h3>
+		
+		<div class="container-fluid">
+			<form method="get" action="LoginServlet">
+				<div class="mb-3">
+					<label for="username" class="form-label">Username:</label>
+					<input type="text" class="form-control" id="username" name="username">
+				</div>
+				<div class="mb-3">
+					<label for="password" class="form-label">Password:</label>
+					<input type="password" class="form-control" id="password" name="password">
+				</div>
+				<input type="submit" value="Submit" class="btn btn-dark">
+			</form>
 		</div>
-	</div>
-
-</div>
-    
-</body>
+	</body>
 </html>
