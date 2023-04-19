@@ -1,6 +1,11 @@
-DROP DATABASE IF EXISTS traktori;
-CREATE DATABASE traktori;
-USE traktori;
-CREATE TABLE marki (id INT, marka VARCHAR(255));
+DROP DATABASE IF EXISTS swmb;
+CREATE DATABASE swmb;
+USE swmb;
+CREATE TABLE jedi (id INT, name VARCHAR(255), pic VARCHAR(255), txt VARCHAR(255));
 CREATE TABLE users (name VARCHAR(255), pass VARCHAR(255), email VARCHAR(255));
-INSERT INTO marki VALUES(1, "Bulgar"), (2, "UMZ");
+INSERT INTO jedi VALUES(1, "Yoda", "Yoda.jpg", "Yoda was a legendary Jedi Master who led the Jedi Order in the years leading up to its destruction by the Sith and the transition of the Galactic Republic into the Galactic Empire. Small in stature but revered for his wisdom and power, Yoda trained generations of Jedi, ultimately serving as the Jedi Order\'s Grand Master. He played integral roles in defending the Republic during the Clone Wars, passing on the Jedi tradition to Luke Skywalker, and unlocking the path to immortality."),
+ (2, "Mace Windu", "Mace-Windu.jpeg", "Mace Windu was a revered Force-sensitive human male Jedi Master and member of the Jedi High Council during the last years of the Republic Era. During his time in the Jedi Order, he once served as elected leader of the Jedi and, during the Clone Wars, as a Jedi General in the Grand Army of the Republic. He was the greatest champion of the Jedi Order and promoted its ancient traditions amidst the growing influence of the dark side of the Force in the corrupt, declining days of the Republic."),
+ (3, "Plo Koon", "Plo-Koon.jpg", "Plo Koon was a Force-sensitive Kel Dor Jedi Master who served as a member of the Jedi High Council during the last years of the Galactic Republic. He served as a respected Jedi General during the Clone Wars, a pan-galactic conflict between the Republic and its splinter state, the Confederacy of Independent Systems. During the war he frequently undertook dangerous missions with the soldiers under his command, the 104th Battalion. Koon wore a breath mask to filter the air around him so that it matched his home planet of Dorin, and wore goggles to prevent his eye fluids from evaporating."),
+ (4, "Ki-Adi-Mundi", "Ki-Adi-Mundi.jpg", "Ki-Adi-Mundi was a Force-sensitive Cerean male Jedi Master and member of the Jedi High Council during the last decades of the Galactic Republic. Following the outbreak of the Clone Wars after the First Battle of Geonosis, Mundi became a Jedi General of the Grand Army of the Republic. Like his Jedi colleagues, he led the Republic clone troopers against the Separatist Alliance forces in several battles across the galaxy, including the second campaign on Geonosis."),
+ (5, "Anakin Skywalker", "Anakin_Skywalker.png", "Anakin Skywalker was a legendary Force-sensitive human male who was a Jedi Knight of the Galactic Republic and the prophesied Chosen One of the Jedi Order, destined to bring balance to the Force. At the end of the Republic Era, Anakin would recieve a vision of his wife, Padme Amidala, dying and in an attempt to save her, he pledged his allegiance to the Sith Lord Darth Sidious, turning to the dark side of the Force. After a duel with Obi-Wan Kenobi, he was terribly scarred and burned. He dawned a black armor suit, which also served as his life-support system, and assumed the identity of Darth Vader.");
+INSERT INTO users VALUES("MishoBankata", "1234", "mb2004@abv.bg");

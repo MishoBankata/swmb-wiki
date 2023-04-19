@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet {
         
         try {
             Class.forName("org.mariadb.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost/traktori");
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost/swmb");
             Statement stmt = conn.createStatement();
             //ResultSet rs = stmt.executeQuery("SELECT * FROM marki");
             String q = String.format("INSERT INTO users VALUES(\"%s\", \"%s\", \"%s\")", username, password, email);
