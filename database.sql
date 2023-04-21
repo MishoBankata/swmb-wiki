@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS swmb;
 CREATE DATABASE swmb;
 USE swmb;
-CREATE TABLE jedi (id INT, name VARCHAR(255), pic VARCHAR(255), txt VARCHAR(255));
+CREATE TABLE jedi (id INT, name VARCHAR(255), pic VARCHAR(255), txt BLOB);
 CREATE TABLE users (name VARCHAR(255), pass VARCHAR(255), email VARCHAR(255));
 INSERT INTO jedi VALUES(1, "Yoda", "Yoda.jpg", "Yoda was a legendary Jedi Master who led the Jedi Order in the years leading up to its destruction by the Sith and the transition of the Galactic Republic into the Galactic Empire. Small in stature but revered for his wisdom and power, Yoda trained generations of Jedi, ultimately serving as the Jedi Order\'s Grand Master. He played integral roles in defending the Republic during the Clone Wars, passing on the Jedi tradition to Luke Skywalker, and unlocking the path to immortality."),
  (2, "Mace Windu", "Mace-Windu.jpeg", "Mace Windu was a revered Force-sensitive human male Jedi Master and member of the Jedi High Council during the last years of the Republic Era. During his time in the Jedi Order, he once served as elected leader of the Jedi and, during the Clone Wars, as a Jedi General in the Grand Army of the Republic. He was the greatest champion of the Jedi Order and promoted its ancient traditions amidst the growing influence of the dark side of the Force in the corrupt, declining days of the Republic."),
