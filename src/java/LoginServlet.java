@@ -28,13 +28,14 @@ public class LoginServlet extends HttpServlet {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(String.format("SELECT COUNT(*) FROM users WHERE name=\"%s\"", username));
             rs.next();
+            ResultSet rs1 = stmt.executeQuery(String.format("SELECT pass FROM users WHERE name=\"%s\"", username));
+            rs1.next();
             
             if(rs.getString(1).equals("1")) {
-                response.getWriter().println("Login successful");
-                
-            } else {
-                response.getWriter().println("Login failed");
-            }
+                if(rs1.getString(1).equals(password)) {
+                    response.getWriter().println("Login successful");
+                } else response.getWriter().println("Login failed");
+            } else response.getWriter().println("Login failed");
             
             
         } catch (ClassNotFoundException ex) {

@@ -27,9 +27,15 @@ public class RegisterServlet extends HttpServlet {
             Class.forName("org.mariadb.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost/swmb");
             Statement stmt = conn.createStatement();
-            //ResultSet rs = stmt.executeQuery("SELECT * FROM marki");
-            String q = String.format("INSERT INTO users VALUES(\"%s\", \"%s\", \"%s\")", username, password, email);
-            ResultSet rs = stmt.executeQuery(q);
+            ResultSet rs1 = stmt.executeQuery(String.format("SELECT COUNT(*) FROM users WHERE name=\"%s\"", username));
+            rs1.next();
+            if(rs1.getString(1).equals("1")) {
+                response.getWriter().println("User exists, registration failed");
+            } else {
+                String q = String.format("INSERT INTO users VALUES(\"%s\", \"%s\", \"%s\")", username, password, email);
+                ResultSet rs = stmt.executeQuery(q);
+                response.getWriter().println("Registration successful");
+            }
             conn.close();
             
 //            while(rs.next()) {
@@ -44,6 +50,6 @@ public class RegisterServlet extends HttpServlet {
             Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        response.getWriter().println("Registration successful");
+        
     }
 }
