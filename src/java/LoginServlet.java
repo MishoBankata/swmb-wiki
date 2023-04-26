@@ -34,13 +34,12 @@ public class LoginServlet extends HttpServlet {
             if(rs.getString(1).equals("1")) {
                 if(rs1.getString(1).equals(password)) {
                     response.getWriter().println("Login successful");
+                    response.sendRedirect("index.html");
                 } else response.getWriter().println("Login failed");
             } else response.getWriter().println("Login failed");
             
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         
