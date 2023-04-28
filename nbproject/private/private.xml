@@ -5,7 +5,8 @@
         <group>
             <file>file:/home/mihail/NetBeansProjects/swmb-wiki/web/register.html</file>
             <file>file:/home/mihail/NetBeansProjects/swmb-wiki/src/java/RegisterServlet.java</file>
-            <file>file:/home/mihail/NetBeansProjects/swmb-wiki/web/index.html</file>
+            <file>file:/home/mihail/NetBeansProjects/swmb-wiki/src/java/ItemsServlet.java</file>
+            <file>file:/home/mihail/NetBeansProjects/swmb-wiki/web/META-INF/context.xml</file>
             <file>file:/home/mihail/NetBeansProjects/swmb-wiki/src/java/LoginServlet.java</file>
         </group>
     </open-files>
